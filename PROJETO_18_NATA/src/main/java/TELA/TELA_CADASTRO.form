@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
+  </SyntheticProperties>
+  <Events>
+    <EventHandler event="windowOpened" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowOpened"/>
+  </Events>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="txtNasc" alignment="1" min="-2" pref="318" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="lblEmail" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCpf" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNasc" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNome" min="-2" max="-2" attributes="0"/>
+                                  <Component id="txtNome" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtCpf" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="txtEmail" alignment="0" pref="316" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
+                              <Component id="btnCadastro" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                      <Component id="btn_seletor" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                      <Component id="lbl_imagem" min="-2" pref="278" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="18" pref="57" max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Component id="Seletor_Arquivos" min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <Component id="lblNome" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtNome" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lblNasc" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtNasc" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lblCpf" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtCpf" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lblEmail" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="txtEmail" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="btnCadastro" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="60" max="32767" attributes="0"/>
+              <Component id="btn_seletor" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="lbl_imagem" min="-2" pref="168" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="Seletor_Arquivos" min="-2" pref="73" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="lblNome">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="NOME:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtNome">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblNasc">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="DATA DE NASCIMENTO:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JFormattedTextField" name="txtNasc">
+      <Properties>
+        <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
+          <Format subtype="1" type="1"/>
+        </Property>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNascActionPerformed"/>
+      </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="TELA_CADASTRO_txtNasc"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCpf">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CPF:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtCpf">
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblEmail">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="EMAIL:"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtEmail">
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCadastro">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="CADASTRAR"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCadastroActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbl_imagem">
+    </Component>
+    <Component class="javax.swing.JButton" name="btn_seletor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Selecionar arquivo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_seletorActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JFileChooser" name="Seletor_Arquivos">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Seletor_ArquivosActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
