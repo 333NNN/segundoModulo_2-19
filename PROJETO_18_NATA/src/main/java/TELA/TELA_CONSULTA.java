@@ -50,7 +50,6 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         txtPeso = new javax.swing.JTextField();
         btnAtualizar = new javax.swing.JButton();
-        btnConsulta = new javax.swing.JButton();
         btnDeletar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable_Lista = new javax.swing.JTable();
@@ -75,7 +74,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             }
         });
 
-        lblNome.setText("NOME DO PATO:");
+        lblNome.setText("NOME DO PATO(A):");
 
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,23 +82,16 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             }
         });
 
-        lblNasc.setText("IDADE:");
+        lblNasc.setText("IDADE(anos):");
 
         lblCpf.setText("SEXO:");
 
-        lblEmail.setText("PESO:");
+        lblEmail.setText("PESO(gramas):");
 
         btnAtualizar.setText("ATUALIZAR");
         btnAtualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtualizarActionPerformed(evt);
-            }
-        });
-
-        btnConsulta.setText("CONSULTAR");
-        btnConsulta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnConsultaActionPerformed(evt);
             }
         });
 
@@ -114,17 +106,17 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
 
         jTable_Lista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null},
+                {null, null, null, null, null, null}
             },
             new String [] {
-                "Id", "Nome", "Data de Nascimento", "CPF", "E-mail"
+                "Id", "Nome", "Idade", "Sexo", "Peso", "Altura"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -137,18 +129,6 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable_Lista);
-        if (jTable_Lista.getColumnModel().getColumnCount() > 0) {
-            jTable_Lista.getColumnModel().getColumn(0).setResizable(false);
-            jTable_Lista.getColumnModel().getColumn(0).setHeaderValue("Id");
-            jTable_Lista.getColumnModel().getColumn(1).setResizable(false);
-            jTable_Lista.getColumnModel().getColumn(1).setHeaderValue("Nome");
-            jTable_Lista.getColumnModel().getColumn(2).setResizable(false);
-            jTable_Lista.getColumnModel().getColumn(2).setHeaderValue("Data de Nascimento");
-            jTable_Lista.getColumnModel().getColumn(3).setResizable(false);
-            jTable_Lista.getColumnModel().getColumn(3).setHeaderValue("CPF");
-            jTable_Lista.getColumnModel().getColumn(4).setResizable(false);
-            jTable_Lista.getColumnModel().getColumn(4).setHeaderValue("E-mail");
-        }
 
         btnCadastro.setText("CADASTRAR");
         btnCadastro.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +150,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             }
         });
 
-        lblEmail1.setText("ALTURA:");
+        lblEmail1.setText("ALTURA(cm):");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -179,37 +159,34 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(btnCadastro)
+                                .addGap(23, 23, 23)
+                                .addComponent(btnAtualizar)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addGap(1, 1, 1)
-                                    .addComponent(btnCadastro)
-                                    .addGap(23, 23, 23)
-                                    .addComponent(btnAtualizar)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(btnDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(txtIdade, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblEmail1)
-                                    .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(lblEmail)
-                                        .addComponent(lblCpf)
-                                        .addComponent(lblNasc)
-                                        .addComponent(lblNome)
-                                        .addComponent(txtNome)
-                                        .addComponent(txtPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)))
-                                .addComponent(jComboBox_Sexo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(txtConsultId, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addComponent(btnConsulta))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblEmail1)
+                            .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblEmail)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(txtIdade, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox_Sexo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblNasc)
+                                .addComponent(lblNome)
+                                .addComponent(txtNome)
+                                .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblCpf))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtConsultId, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -218,9 +195,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtConsultId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnConsulta))
+                .addComponent(txtConsultId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblNome)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -231,7 +206,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
                 .addComponent(txtIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(lblCpf)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(12, 12, 12)
                 .addComponent(jComboBox_Sexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(12, 12, 12)
                 .addComponent(lblEmail)
@@ -241,14 +216,15 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
                 .addComponent(lblEmail1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtualizar)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCadastro))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnAtualizar)
+                        .addComponent(btnCadastro)))
                 .addGap(38, 38, 38)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         pack();
@@ -278,7 +254,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             }
 
             conexao = DriverManager.getConnection(url, usuario, senha);
-            String sql = "UPDATE usuario SET nome = ?, nascimento = ?, cpf = ?, email = ? WHERE id = ?";
+            String sql = "UPDATE corredor SET nome = ?, idade = ?, sexo = ?, peso = ?, altura = ? WHERE id = ?";
             statement = conexao.prepareStatement(sql);
 
             statement.setString(1, txtNome.getText());
@@ -286,6 +262,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             statement.setString(3, jComboBox_Sexo.getSelectedItem().toString());
             statement.setString(4, txtPeso.getText());
             statement.setString(5, txtAltura.getText());
+            statement.setString(6, id);
 
             int linhasAfetadas = statement.executeUpdate();
 
@@ -295,12 +272,10 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             } else {
                 JOptionPane.showMessageDialog(this, "Nenhum registro encontrado com o ID fornecido.");
             }
-
-        } catch (DateTimeParseException ex) {
-
-            JOptionPane.showMessageDialog(this, "Data de nascimento inválida!");
+            PopularJTable("SELECT * FROM corredor");
+            
         } catch (SQLException ex) {
-            Logger.getLogger(TELA_CADASTRO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TELA_CONSULTA.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Erro no Banco de Dados: " + ex.getMessage());
         }
     }//GEN-LAST:event_btnAtualizarActionPerformed
@@ -327,7 +302,7 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
         if (confirmacao == JOptionPane.YES_OPTION) {
             try {
                 conexao = DriverManager.getConnection(url, usuario, senha);
-                String sql = "DELETE FROM usuario WHERE id = ?";
+                String sql = "DELETE FROM corredor WHERE id = ?";
                 statement = conexao.prepareStatement(sql);
                 statement.setString(1, id);
 
@@ -335,7 +310,8 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
 
                 if (rowsDeleted > 0) {
                     JOptionPane.showMessageDialog(this, "Registro deletado com sucesso!");
-
+                    
+                    txtConsultId.setText("");
                     txtNome.setText("");
                     txtIdade.setText("");
                     jComboBox_Sexo.setSelectedIndex(-1);
@@ -344,9 +320,10 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
                 } else {
                     JOptionPane.showMessageDialog(this, "ID não encontrado. Nenhum registro foi deletado.");
                 }
-
+                
+                PopularJTable("SELECT * FROM corredor");
             } catch (SQLException ex) {
-                Logger.getLogger(TELA_CADASTRO.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(TELA_CONSULTA.class.getName()).log(Level.SEVERE, null, ex);
                 JOptionPane.showMessageDialog(this, "Erro no Banco de Dados: " + ex.getMessage());
             } finally {
                 try {
@@ -367,14 +344,15 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
-        PopularJTable("SELECT * FROM usuario");
+        PopularJTable("SELECT * FROM corredor");
     }//GEN-LAST:event_formWindowOpened
 
     private void jTable_ListaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable_ListaMouseClicked
         // TODO add your handling code here:
         int linha = jTable_Lista.getSelectedRow();
-
-        txtNome.setText(jTable_Lista.getValueAt(linha, 1).toString());
+        
+        txtConsultId.setText(jTable_Lista.getValueAt(linha, 0).toString());
+        txtNome.setText(jTable_Lista.getValueAt(linha, 1).toString()); 
         txtIdade.setText(jTable_Lista.getValueAt(linha, 2).toString());
         jComboBox_Sexo.setSelectedItem(jTable_Lista.getValueAt(linha, 3).toString());
         txtPeso.setText(jTable_Lista.getValueAt(linha, 4).toString());
@@ -390,7 +368,6 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
         String url = "jdbc:mysql://localhost:3306/pato";
         String usuario = "root";
         String senha = "";
-        String dataNascimento = txtIdade.getText();
 
         try {
 
@@ -408,12 +385,9 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
             System.out.println("Cadastro realizado com sucesso!");
 
             JOptionPane.showMessageDialog(this, "Cadastro realizado com sucesso!");
-
-        } catch (DateTimeParseException ex) {
-
-            JOptionPane.showMessageDialog(this, "Data de nascimento inválida!");
+            PopularJTable("SELECT * FROM corredor");
         } catch (SQLException ex) {
-            Logger.getLogger(TELA_CADASTRO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(TELA_CONSULTA.class.getName()).log(Level.SEVERE, null, ex);
             System.out.println("Erro no Banco de Dados: " + ex.getMessage());
         }
     }//GEN-LAST:event_btnCadastroActionPerformed
@@ -426,59 +400,6 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox_SexoActionPerformed
 
-    private void btnConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultaActionPerformed
-        // TODO add your handling code here:
-        String id = txtConsultId.getText();
-        if (id.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, insira um ID.");
-            return;
-        }
-
-        String url = "jdbc:mysql://localhost:3306/pato";
-        String usuario = "root";
-        String senha = "";
-        Connection conexao = null;
-        PreparedStatement statement = null;
-        ResultSet resultSet = null;
-
-        try {
-            conexao = DriverManager.getConnection(url, usuario, senha);
-            String sql = "SELECT nome, idade, sexo, peso, altura FROM corredor WHERE id = ?";
-            statement = conexao.prepareStatement(sql);
-            statement.setString(1, id);
-
-            resultSet = statement.executeQuery();
-
-            if (resultSet.next()) {
-                txtNome.setText(resultSet.getString("nome"));
-                txtIdade.setText(resultSet.getString("idade"));
-                jComboBox_Sexo.setSelectedItem(resultSet.getString("sexo"));
-                txtPeso.setText(resultSet.getString("peso"));
-                txtAltura.setText(resultSet.getString("altura"));
-            } else {
-                JOptionPane.showMessageDialog(this, "Usuário não encontrado com esse ID.");
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(TELA_CADASTRO.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.println("Erro no Banco de Dados: " + ex.getMessage());
-        } finally {
-            try {
-                if (resultSet != null) {
-                    resultSet.close();
-                }
-                if (statement != null) {
-                    statement.close();
-                }
-                if (conexao != null) {
-                    conexao.close();
-                }
-            } catch (SQLException e) {
-                System.out.println("Erro no Banco de dados:" + e.getMessage());
-            }
-        }
-    }//GEN-LAST:event_btnConsultaActionPerformed
-
     private void txtConsultIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtConsultIdActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtConsultIdActionPerformed
@@ -486,30 +407,35 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
     public void PopularJTable(String sql) {
         try {
             // Conexão com o banco de dados
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/pato", "root", "");
-
-            // Preparar a consulta SQL
-            PreparedStatement banco = con.prepareStatement(sql);
-            ResultSet resultado = banco.executeQuery();
-
+            String url = "jdbc:mysql://localhost:3306/pato";
+            String usuario = "root";
+            String senha = "";
+            Connection conexao = null;
+            PreparedStatement statement = null;
+            ResultSet resultSet = null;
+            
+            conexao = DriverManager.getConnection(url, usuario, senha);
+            statement = conexao.prepareStatement(sql);
+            resultSet = statement.executeQuery();
+            
             // Limpa as linhas existentes no modelo da JTable
             DefaultTableModel model = (DefaultTableModel) jTable_Lista.getModel();
             model.setNumRows(0);
 
             // Itera sobre o resultado da consulta e adiciona as linhas ao modelo da JTable
-            while (resultado.next()) {
+            while (resultSet.next()) {
                 model.addRow(new Object[]{
-                    resultado.getString("id"),
-                    resultado.getString("nome"),
-                    resultado.getString("nascimento"),
-                    resultado.getString("cpf"),
-                    resultado.getString("email")
+                    resultSet.getString("id"),
+                    resultSet.getString("nome"),
+                    resultSet.getString("idade"),
+                    resultSet.getString("sexo"),
+                    resultSet.getString("peso"),
+                    resultSet.getString("altura")
                 });
             }
 
-            resultado.close();
-            banco.close();
-            con.close();
+            resultSet.close();
+            conexao.close();
         } catch (SQLException e) {
             System.out.println("O erro foi: " + e.getMessage());
         }
@@ -558,7 +484,6 @@ public class TELA_CONSULTA extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtualizar;
     private javax.swing.JButton btnCadastro;
-    private javax.swing.JButton btnConsulta;
     private javax.swing.JButton btnDeletar;
     private javax.swing.JComboBox<Object> jComboBox_Sexo;
     private javax.swing.JLabel jLabel1;
